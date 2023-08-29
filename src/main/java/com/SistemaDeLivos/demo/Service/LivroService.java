@@ -14,14 +14,14 @@ import java.util.List;
 
 @Service
 public class LivroService{
-
-    private final LivroRepository livroRepository;
+    
+@Autowired
+    private LivroRepository livroRepository;
     private final EmprestimoRepository emprestimoRepository;
     private final EnderecoRepository enderecoRepository;
 
 @Autowired
     public LivroService(LivroRepository livroRepository, EmprestimoRepository emprestimoRepository, EnderecoRepository enderecoRepository) {
-        this.livroRepository = livroRepository;
         this.emprestimoRepository = emprestimoRepository;
         this.enderecoRepository = enderecoRepository;
     }
