@@ -11,10 +11,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/Livros")
 public class LivroController {
-
+    
+  @Autowired
     private final LivroService livroService;
 
-    @Autowired
+  
     public LivroController(LivroController livroController, LivroService livroService) {
         this.livroService = livroService;
 
